@@ -1,0 +1,581 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.body-login {
+    display: flex;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    height: 100vmax;
+    width: 100vmax;
+}
+
+#form-login {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    margin: auto;
+}
+
+#email-login,
+#senha-login {
+    width: 300px;
+}
+
+#botao-login {
+    margin-top: 15px;
+}
+
+header {
+    display: flex;
+    height: 115px;
+    width: calc(100% - 250px);
+    float: right;
+}
+
+header>h1 {
+    display: flex;
+    height: auto;
+    padding: 15px;
+    margin: auto;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: #005cc8;
+}
+
+aside {
+    display: flex;
+    position: fixed;
+    top: 115px;
+    height: 100%;
+    width: 250px;
+    background-color: #005cc8;
+}
+
+.logo {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 115px;
+    width: 250px;
+    padding: 15px;
+    justify-content: center;
+    align-content: center;
+    background-color: #005cc8;
+}
+
+.logo>img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+aside>nav {
+    width: 100%;
+    overflow: auto;
+}
+
+aside>nav>ul {
+    width: 100%;
+}
+
+#menu {
+    font-weight: bold;
+    user-select: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#menu i {
+    width: 20px;
+}
+
+.item-menu {
+    display: flex;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.item-menu::after {
+    content: "\25B6";
+    color: white;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.item-menu-down::after {
+    transform: rotate(90deg);
+}
+
+.item-menu:hover {
+    background-color: dodgerblue;
+}
+
+.item-menu>i {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.submenu-down {
+    background-color: dodgerblue;
+}
+
+.submenu {
+    display: flex;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.submenu::after {
+    content: "\25B6";
+    color: white;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.submenu-down::after {
+    transform: rotate(90deg);
+}
+
+.submenu:hover {
+    background-color: dodgerblue;
+}
+
+.submenu>i {
+    margin: 0 15px 0 15px;
+    font-size: 20px;
+}
+
+.aninhado {
+    display: none;
+}
+
+.menuativo {
+    display: block;
+}
+
+.menuativo>span>i {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.tela-ativa {
+    background-color: dodgerblue;
+}
+
+.tela>span {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    padding: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.tela:hover {
+    background-color: dodgerblue;
+}
+
+.tela>span>i {
+    margin: 0 15px 0 30px;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    float: right;
+    min-height: calc(100vh - 100px);
+    width: calc(100% - 250px);
+    padding: 0 15px 15px 15px;
+    margin: auto;
+}
+
+main>form {
+    box-shadow: 5px 5px 5px #cac8c8;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: white;
+    width: 100%;
+    min-width: fit-content;
+}
+
+form>fieldset {
+    border: 1px solid #005cc8;
+    border-radius: 4px;
+    background-color: white;
+}
+
+form>fieldset>fieldset {
+    border: 1px solid #005cc8;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.buttons {
+    display: flex;
+    padding: 15px 0 15px 15px;
+    width: fit-content;
+    align-items: flex-end;
+    border: 1px solid #005cc8;
+    border-radius: 4px;
+    background-color: white;
+    margin-bottom: 15px;
+    max-height: 80px;
+}
+
+.button {
+    background-color: #005cc8;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    margin-right: 15px;
+    height: 50px;
+    user-select: none;
+    font-size: 20px;
+    margin-top: 39px;
+}
+
+.button:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+.fieldset-primario {
+    padding: 15px;
+    width: 100%;
+}
+
+.fieldset-secundario {
+    padding: 15px 0 15px 15px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+form>fieldset>legend {
+    width: max-content;
+    color: #005cc8;
+    background: white;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 4px;
+    height: 50px;
+    border: 1px solid #005cc8;
+}
+
+form>fieldset>fieldset>legend {
+    width: max-content;
+    color: #005cc8;
+    background: white;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 4px;
+    height: 50px;
+    border: 1px solid #005cc8;
+}
+
+.modal-content>fieldset {
+    border: 1px solid #005cc8;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.modal-content>fieldset>fieldset {
+    border: 1px solid #005cc8;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.modal-content>fieldset>legend {
+    width: max-content;
+    color: #005cc8;
+    background: white;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 4px;
+    height: 50px;
+    border: 1px solid #005cc8;
+}
+
+.linha {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: baseline;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.elemento {
+    margin-top: 15px;
+    margin-right: 15px;
+    width: fit-content;
+}
+
+.elemento>label {
+    font-weight: bold;
+    color: #333333;
+    width: fit-content;
+}
+
+.elemento>input[type="text"] {
+    display: block;
+    border: 1px solid #005cc8;
+    color: #333333;
+    padding: 15px;
+    margin-top: 7.5px;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 50px;
+    width: 100%;
+}
+
+.elemento>input[type="password"] {
+    display: block;
+    border: 1px solid #005cc8;
+    color: #333333;
+    padding: 15px;
+    margin-top: 7.5px;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 50px;
+    width: 100%;
+}
+
+.elemento>input[type="date"] {
+    display: block;
+    border: 1px solid #005cc8;
+    color: #333333;
+    padding: 15px;
+    margin-top: 7.5px;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 50px;
+    width: 100%;
+}
+
+.elemento>select {
+    display: block;
+    border: 1px solid #005cc8;
+    color: #333333;
+    padding: 15px;
+    margin-top: 7.5px;
+    margin-right: -25.6px;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+}
+
+.elemento>input[type="email"] {
+    display: block;
+    border: 1px solid #005cc8;
+    color: #333333;
+    padding: 15px;
+    margin-top: 7.5px;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 50px;
+    width: 100%;
+}
+
+/* FORMATAÇÃO DA PÁGINA "PESSOAS" */
+
+#codigo {
+    width: 158.7px;
+}
+
+#pessoa {
+    width: 108.01px;
+}
+
+.cliente-ativo {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: auto;
+    margin-right: 15px;
+    font-weight: bold;
+    color: #333333;
+    user-select: none;
+}
+
+#tipo-pessoa {
+    flex-grow: 1;
+    max-width: 392.31px;
+}
+
+#nome {
+    flex-grow: 1;
+    max-width: 1559px;
+}
+
+#razao-social,
+#nome-fantasia {
+    flex-grow: 1;
+    max-width: 772px;
+}
+
+#documento1,
+#documento2 {
+    flex-grow: 1;
+}
+
+#data-nascimento,
+#data-cadastro {
+    flex-grow: 1;
+    min-width: 378.5px;
+}
+
+#cep {
+    flex-grow: 1;
+    max-width: 243.75px;
+}
+
+.correios {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: auto;
+    margin-right: 15px;
+}
+
+.correios>a {
+    width: fit-content;
+    height: fit-content;
+}
+
+#endereco {
+    flex-grow: 1;
+    max-width: 1165.50px;
+}
+
+#numero {
+    flex-grow: 1;
+    max-width: 314.50px;
+}
+
+.sem-numero {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: auto;
+    margin-right: 15px;
+    font-weight: bold;
+    color: #333333;
+    width: fit-content;
+    user-select: none;
+}
+
+#complemento,
+#bairro,
+#cidade,
+#estado,
+#telefone,
+#celular,
+#email,
+#site {
+    flex-grow: 1;
+    max-width: 378.50px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#procurar-pessoa-select {
+    width: 108.01px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #codigo,
+    #nome1,
+    #nome2,
+    #documento1,
+    #documento2,
+    #data-nascimento,
+    #data-cadastro,
+    #cep,
+    #complemento,
+    #bairro,
+    #cidade,
+    #estado,
+    #telefone,
+    #celular,
+    #email,
+    #site {
+        flex-grow: 1;
+    }
+}
+
+/* FIM DA FORMATAÇÃO DA PÁGINA "PESSOAS" */
+
+footer {
+    display: flex;
+    height: 100px;
+    width: calc(100% - 250px);
+    float: right;
+}
+
+footer>h2 {
+    display: flex;
+    height: fit-content;
+    padding: 15px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}

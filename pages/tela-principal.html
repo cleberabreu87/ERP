@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/fontawesome/all.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <h1>ERP</h1>
+    </header>
+
+    <aside>
+        <nav>
+            <a class="logo" href="tela-principal.html"><img src="../assets/logos/logo.jpg" alt="logo"></a>
+            <ul id="menu">
+                <li><span class="item-menu"><i class="fas fa-plus-square"></i>Cadastros</span>
+                    <ul class="aninhado">
+                        <li><span class="submenu"><i class="fas fa-hospital-alt"></i>Corporativos</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="cadastro-empresas"><i class="fas fa-hospital-alt"></i>Empresa e
+                                        Filiais</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="submenu"><i class="fas fa-list-ol"></i>Básicos</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="cadastro-pessoas"><i class="fas fa-user-tag"></i>Pessoas</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="submenu"><i class="fas fa-user-cog"></i>Gerenciais</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="cadastro-usuarios"><i class="fas fa-users"></i>Usuários</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="item-menu"><i class="fas fa-comment-dollar"></i>Comercial</span>
+                    <ul class="aninhado">
+                        <li><span class="submenu"><i class="fas fa-plus-square"></i>Cadastros</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="cadastro-vendedores"><i class="fas fa-user-tie"></i>Vendedores</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="cadastro-tabela-preco"><i class="fas fa-clipboard-list"></i>Tabela de
+                                        Preços</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="cadastro-condicoes-pagamento"><i class="fas fa-hands-helping"></i>Cond. de
+                                        Pagamento</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="item-menu"><i class="fas fa-dollar-sign"></i>Financeiro</span>
+                    <ul class="aninhado">
+                        <li><span class="submenu"><i class="fas fa-plus-square"></i>Cadastros</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="cadastro-contas-bancarias"><i class="fas fa-university"></i>Contas
+                                        Bancárias</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="cadastro-tipos-lancamento"><i class="fas fa-money-check-alt"></i>Tipos de
+                                        Lançamento</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="cadastro-posicoes-fluxo"><i class="fas fa-stream"></i>Posições de
+                                        Fluxo</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="submenu"><i class="fas fa-chart-line"></i>Dashboards</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="vendas-periodo"><i class="fas fa-file-invoice-dollar"></i>Vendas no
+                                        Período</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="submenu"><i class="fas fa-download"></i>Contas a Receber</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="relatorio-a-receber"><i class="fas fa-file-invoice-dollar"></i>Relatório a
+                                        Receber</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="relatorio-recebidos"><i class="fas fa-file-invoice-dollar"></i>Relatorório
+                                        Recebidos</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="submenu"><i class="fas fa-upload"></i>Contas a Pagar</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="relatorio-a-pagar"><i class="fas fa-file-invoice-dollar"></i>Relatório
+                                        a Pagar</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="relatorio-pagos"><i class="fas fa-file-invoice-dollar"></i>Relatório
+                                        Pagas</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="submenu"><i class="fas fa-cash-register"></i>Fluxo de Caixa</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="fluxo-caixa-lancamento"><i
+                                            class="fas fa-file-invoice-dollar"></i>Lançamento</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="fluxo-caixa-posicao"><i
+                                            class="fas fa-file-invoice-dollar"></i>Posição</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="item-menu"><i class="fas fa-box-open"></i>Estoque</span>
+                    <ul class="aninhado">
+                        <li><span class="submenu"><i class="fas fa-plus-square"></i>Cadastros</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="cadastro-almoxarifados"><i class="fas fa-boxes"></i>Almoxarifados</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="cadastro-grupos-materiais"><i class="fas fa-layer-group"></i>Grupos de
+                                        Materiais</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="cadastro-unidades-medida"><i class="fas fa-ruler"></i>Unidades de
+                                        Medida</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="cadastro-materiais-servicos"><i class="fas fa-th-list"></i>Materiais e
+                                        Serviços</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="item-menu"><i class="fas fa-calculator"></i>Controladoria</span>
+                    <ul class="aninhado">
+                        <li><span class="submenu"><i class="fas fa-plus-square"></i>Cadastros</span>
+                            <ul class="aninhado">
+                                <li class="tela">
+                                    <span id="cadastro-aplicacoes"><i
+                                            class="fas fa-compress-arrows-alt"></i>Aplicações</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="cadastro-informacoes-fiscais"><i
+                                            class="fas fa-balance-scale"></i>Informações Fiscais</span>
+                                </li>
+                                <li class="tela">
+                                    <span id="cadastro-centros-resultado"><i class="fas fa-poll"></i>Centros de
+                                        Resultado</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <iframe src="" frameborder="0" id="tela-principal"></iframe>
+    </main>
+
+    <footer>
+        <h2>Sistema ERP - Cleber de Souza Abreu</h2>
+    </footer>
+
+    <script src="../assets/js/menu.js" defer></script>
+
+</body>
+
+</html>

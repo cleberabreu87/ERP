@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pessoas</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/fontawesome/all.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <form>
+        <div class="buttons">
+            <p class="button" id="novo-pessoa"><i class="fas fa-plus-square"></i></p>
+            <p class="button" id="salvar-pessoa"><i class="fas fa-save"></i></p>
+            <p class="button" id="excluir-pessoa"><i class="fas fa-trash"></i></p>
+            <p class="button" id="procurar-pessoa"><i class="fas fa-search"></i></p>
+        </div>
+        <fieldset class="fieldset-primario">
+            <legend>Cadastro de Pessoas</legend>
+
+            <fieldset class="fieldset-secundario">
+                <legend>Informações Gerais</legend>
+                <div class="linha">
+                    <div class="elemento" id="codigo">
+                        <label for="codigo">Código do Cliente:</label>
+                        <input type="text" name="codigo" disabled>
+                    </div>
+                    <div class="cliente-ativo">
+                        <label for="cliente-ativo">Ativo?<input type="checkbox" name="cliente-ativo" id="cliente-ativo"
+                                checked></label>
+                    </div>
+                    <div class="elemento" id="pessoa">
+                        <label for="pessoa">Pessoa: *</label>
+                        <select name="pessoa">
+                            <option selected>Física</option>
+                            <option>Jurídica</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                    <div class="elemento" id="tipo-pessoa">
+                        <label for="tipo-pessoa">Tipo de Pessoa: *</label>
+                        <select name="tipo-pessoa">
+                            <option selected>Cliente</option>
+                            <option>Fornecedor</option>
+                            <option>Colaborador</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="elemento" id="nome">
+                        <label for="nome">Nome: *</label>
+                        <input type="text" name="nome">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="elemento" id="razao-social">
+                        <label for="razao-social">Razão Social: *</label>
+                        <input type="text" name="razao-social">
+                    </div>
+                    <div class="elemento" id="nome-fantasia">
+                        <label for="nome-fantasia">Nome Fantasia: *</label>
+                        <input type="text" name="nome-fantasia">
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="elemento" id="documento1">
+                        <label for="documento1">CPF: *</label>
+                        <input type="text" name="documento1" inputmode="numeric" maxlength="18"
+                            placeholder="___.___.___-__">
+                    </div>
+                    <div class="elemento" id="documento2">
+                        <label for="documento2">RG: *</label>
+                        <input type="text" name="documento2" id="documento1-label">
+                    </div>
+                    <div class="elemento" id="data-nascimento">
+                        <label for="data-nascimento">Data de Nascimento:</label>
+                        <input type="date" name="data-nascimento">
+                    </div>
+                    <div class="elemento" id="data-cadastro">
+                        <label for="data-cadastro">Data de Cadastro:</label>
+                        <input type="date" name="data-cadastro" disabled>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="fieldset-secundario">
+                <legend>
+                    Endereço:
+                </legend>
+                <div class="linha">
+                    <div class="elemento" id="cep">
+                        <label for="cep">CEP: *</label>
+                        <input type="text" name="cep" maxlength="9" placeholder="_____-___">
+                    </div>
+                    <div class="correios">
+                        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="-blanck">Não
+                            sabe o
+                            CEP?</a>
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="elemento" id="endereco">
+                        <label for="endereco">Endereço: *</label>
+                        <input type="text" name="endereco">
+                    </div>
+                    <div class="elemento" id="numero">
+                        <label for="numero">Número: *</label>
+                        <input type="text" name="numero">
+                    </div>
+                    <div class="sem-numero" id="sem-numero">
+                        <label for="sem-numero">S/N<input type="checkbox" name="sem-numero"></label>
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="elemento" id="complemento">
+                        <label for="complemento">Complemento:</label>
+                        <input type="text" name="complemento">
+                    </div>
+                    <div class="elemento" id="bairro">
+                        <label for="bairro">Bairro: *</label>
+                        <input type="text" name="bairro">
+                    </div>
+                    <div class="elemento" id="estado">
+                        <label for="estado">Estado: *</label>
+                        <select name="estado">
+                            <option></option>
+                            <option value="AC">AC - Acre</option>
+                            <option value="AL">AL - Alagoas</option>
+                            <option value="AP">AP - Amapá</option>
+                            <option value="AM">AM - Amazonas</option>
+                            <option value="BA">BA - Bahia</option>
+                            <option value="CE">CE - Ceará</option>
+                            <option value="DF">DF - Distrito Federal</option>
+                            <option value="ES">ES - Espírito Santo</option>
+                            <option value="GO">GO - Goiás</option>
+                            <option value="MA">MA - Maranhão</option>
+                            <option value="MT">MT - Mato Grosso</option>
+                            <option value="MS">MS - Mato Grosso do Sul</option>
+                            <option value="MG">MG - Minas Gerais</option>
+                            <option value="PA">PA - Pará</option>
+                            <option value="PB">PB - Paraíba</option>
+                            <option value="PR">PR - Paraná</option>
+                            <option value="PE">PE - Pernambuco</option>
+                            <option value="PI">PI - Piauí</option>
+                            <option value="RJ">RJ - Rio de Janeiro</option>
+                            <option value="RN">RN - Rio Grande do Norte</option>
+                            <option value="RS">RS - Rio Grande do Sul</option>
+                            <option value="RO">RO - Rondônia</option>
+                            <option value="RR">RR - Roraima</option>
+                            <option value="SC">SC - Santa Catarina</option>
+                            <option value="SP">SP - São Paulo</option>
+                            <option value="SE">SE - Sergipe</option>
+                            <option value="TO">TO - Tocantins</option>
+                            <option value="EX">EX - Exterior</option>
+                        </select>
+                    </div>
+                    <div class="elemento" id="cidade">
+                        <label for="cidade">Cidade: *</label>
+                        <input type="text" name="cidade">
+                    </div>
+            </fieldset>
+            <fieldset class="fieldset-secundario">
+                <legend>
+                    Contato:
+                </legend>
+                <div class="linha">
+                    <div class="elemento" id="telefone">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" name="telefone" maxlength="14" placeholder="(__) ____-____">
+                    </div>
+                    <div class="elemento" id="celular">
+                        <label for="celular">Celular:</label>
+                        <input type="text" name="celular" maxlength="15" placeholder="(__) _____-____">
+                    </div>
+                    <div class="elemento" id="email">
+                        <label for="email">E-Mail:</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="elemento" id="site">
+                        <label for="site">Site:</label>
+                        <input type="text" name="site">
+                    </div>
+                </div>
+            </fieldset>
+        </fieldset>
+        <div id="modal-procurar-pessoa" class="modal">
+
+            <!-- Modal procurar pessoa -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <fieldset class="fieldset-secundario">
+                    <legend>Procurar Pessoa</legend>
+                    <div class="elemento" id="procurar-pessoa-select">
+                        <label for="pessoa">Pessoa:</label>
+                        <select name="pessoa">
+                            <option selected>Física</option>
+                            <option>Jurídica</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                    <div class="linha">
+                        <div class="elemento" id="procurar-pessoa-nome">
+                            <label for="procurar-nome">Nome:</label>
+                            <input type="text" name="procurar-nome">
+                        </div>
+                        <p class="button" id="btn-procurar-pessoa-nome"><i class="fas fa-search"></i></p>
+                    </div>
+                    <div class="linha">
+                        <div class="elemento" id="procurar-pessoa-razao-social">
+                            <label for="razao-social">Razão Social:</label>
+                            <input type="text" name="razao-social">
+                        </div>
+                        <p class="button" id="btn-procurar-pessoa-razao-social"><i class="fas fa-search"></i></p>
+                    </div>
+                    <div class="linha">
+                        <div class="elemento" id="procurar-pessoa-nome-fantasia">
+                            <label for="nome-fantasia">Nome Fantasia:</label>
+                            <input type="text" name="nome-fantasia">
+                        </div>
+                        <p class="button" id="btn-procurar-pessoa-nome-fantasia"><i class="fas fa-search"></i></p>
+                    </div>
+                    <div class="linha">
+                        <div class="elemento" id="procurar-pessoa-documento1">
+                            <label for="documento1">CPF:</label>
+                            <input type="text" name="documento1" inputmode="numeric" maxlength="18"
+                                placeholder="___.___.___-__">
+                        </div>
+                        <p class="button" id="btn-procurar-pessoa-documento1"><i class="fas fa-search"></i></p>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+
+    <script src="../assets/js/cadastro-pessoas.js" defer></script>
+
+</body>
+
+</html>
